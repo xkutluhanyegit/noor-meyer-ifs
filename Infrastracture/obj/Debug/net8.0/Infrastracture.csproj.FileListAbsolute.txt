@@ -1,0 +1,16 @@
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\bin\Debug\net8.0\Infrastracture.deps.json
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\bin\Debug\net8.0\Infrastracture.dll
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\bin\Debug\net8.0\Infrastracture.pdb
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\bin\Debug\net8.0\Domain.dll
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\bin\Debug\net8.0\Domain.pdb
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\Infrastracture.csproj.AssemblyReference.cache
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\Infrastracture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\Infrastracture.AssemblyInfoInputs.cache
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\Infrastracture.AssemblyInfo.cs
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\Infrastracture.csproj.CoreCompileInputs.cache
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\Infrastracture.sourcelink.json
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\Infrastr.15F6909A.Up2Date
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\Infrastracture.dll
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\refint\Infrastracture.dll
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\Infrastracture.pdb
+C:\Users\kutluhan.yegit\Desktop\noor-meyer-ifs\Infrastracture\obj\Debug\net8.0\ref\Infrastracture.dll
