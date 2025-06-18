@@ -1,5 +1,7 @@
 using Application.Interfaces;
 using Application.Services;
+using Infrastracture.ExternalServices.MeyerApi.Interfaces;
+using Infrastracture.ExternalServices.MeyerApi.Services;
 using Infrastracture.Persistence.Repositories.Dapper.NoorEmployeeRepository;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,10 +16,21 @@ builder.Services.AddControllers();
 var connectionString = "User Id=IFSAPP;Password=TIMETRAVEL;Data Source=192.168.48.20:1521/PROD";
 
 
-
+builder.Services.AddScoped<INoorEmployeeService, NoorEmployeeService>();
 builder.Services.AddScoped<ITestNoorEmpService, TestNoorEmployeeService>();
 builder.Services.AddScoped<INoorEmployeeRepository>(provider =>
     new NoorEmployeeRepository(connectionString));
+
+
+
+
+builder.Services.AddScoped<IMeyerTokenService,MeyerTokenService>();
+builder.Services.AddHttpClient<MeyerTokenService>();
+
+
+builder.Services.AddScoped<IMeyerSetSicilService,MeyerSetSicilService>();
+builder.Services.AddHttpClient<MeyerSetSicilService>();
+
 
 
 

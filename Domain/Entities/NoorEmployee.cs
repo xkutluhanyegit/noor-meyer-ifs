@@ -12,5 +12,9 @@ namespace Domain.Entities
         public string EMP_NO { get; set; }
         public string FNAME { get; set; }
         public string LNAME { get; set; }
+        public string PICTURE_ID { get; set; }
+        public string DATE_OF_BIRTH { get; set; }
+        public string SEX { get; set; }
+        public string BLOOD_TYPE { get; set; }
     }
 }

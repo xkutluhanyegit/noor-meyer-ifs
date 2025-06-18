@@ -30,7 +30,7 @@ namespace Infrastracture.Persistence.Repositories.Dapper.NoorEmployeeRepository
 
         public Task<IEnumerable<NoorEmployee>> GetAllAsync()
         {
-            string query = "SELECT COMPANY_ID, EMP_NO, FNAME, LNAME FROM company_person_all WHERE company_id IN ('NE', 'KL', 'NT', 'KS', 'KK', 'GK')";
+            string query = "SELECT COMPANY_ID, EMP_NO, FNAME, LNAME, PICTURE_ID, DATE_OF_BIRTH, SEX, BLOOD_TYPE FROM company_person_all WHERE company_id IN ('NE', 'KL', 'NT', 'KS', 'KK', 'GK') AND EMPLOYEE_STATUS = '*' AND EMP_NO <> 'SYS'";
             var sql = $"{query}";
             return GetAllAsync(sql);
         }

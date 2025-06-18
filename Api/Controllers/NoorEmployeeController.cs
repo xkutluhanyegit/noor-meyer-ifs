@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.Interfaces;
+using Infrastracture.ExternalServices.MeyerApi.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
@@ -11,21 +12,28 @@ namespace Api.Controllers
     [Route("api/[controller]")]
     public class NoorEmployeeController : ControllerBase
     {
-        ITestNoorEmpService _testNoorEmpService;
-        public NoorEmployeeController(ITestNoorEmpService testNoorEmpService)
+        IMeyerTokenService _meyerTokenService;
+        IMeyerSetSicilService _meyerSetSicilService;
+        INoorEmployeeService _noorEmployeeService;
+        public NoorEmployeeController(IMeyerTokenService meyerTokenService,IMeyerSetSicilService meyerSetSicilService,INoorEmployeeService noorEmployeeService)
         {
-            _testNoorEmpService = testNoorEmpService;
+            _meyerTokenService = meyerTokenService;
+            _meyerSetSicilService = meyerSetSicilService;
+            _noorEmployeeService = noorEmployeeService;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var tokenResponse = await _meyerTokenService.GetTokenAsync();
+            var setSicilResponse = await _meyerSetSicilService.SetSicilAsync();
 
 
-            var result2 = await _testNoorEmpService.GetAllAsync();
 
             await Task.Yield();
-            return Ok(result2);
+            return Ok();
         }
+
+        
     }
 }
