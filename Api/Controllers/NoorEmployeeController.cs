@@ -15,11 +15,18 @@ namespace Api.Controllers
         IMeyerTokenService _meyerTokenService;
         IMeyerSetSicilService _meyerSetSicilService;
         INoorEmployeeService _noorEmployeeService;
-        public NoorEmployeeController(IMeyerTokenService meyerTokenService,IMeyerSetSicilService meyerSetSicilService,INoorEmployeeService noorEmployeeService)
+        IMeyerSetSicilFotografService _meyerSetSicilFotografService;
+
+        INoorEmployeeImgService _noorEmployeeImgService;
+
+        public NoorEmployeeController(IMeyerTokenService meyerTokenService,IMeyerSetSicilService meyerSetSicilService
+        ,INoorEmployeeService noorEmployeeService,INoorEmployeeImgService noorEmployeeImgService,IMeyerSetSicilFotografService meyerSetSicilFotografService)
         {
             _meyerTokenService = meyerTokenService;
             _meyerSetSicilService = meyerSetSicilService;
             _noorEmployeeService = noorEmployeeService;
+            _noorEmployeeImgService = noorEmployeeImgService;
+            _meyerSetSicilFotografService = meyerSetSicilFotografService;
         }
 
         [HttpGet]
@@ -27,6 +34,11 @@ namespace Api.Controllers
         {
             var tokenResponse = await _meyerTokenService.GetTokenAsync();
             var setSicilResponse = await _meyerSetSicilService.SetSicilAsync();
+            var setSicilFotograf = await _meyerSetSicilFotografService.SetSicilFotografAsync();
+            
+            
+
+            var empImg = await _noorEmployeeImgService.GetAllAsync();
 
 
 

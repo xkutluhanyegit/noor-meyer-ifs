@@ -16,12 +16,15 @@ builder.Services.AddControllers();
 var connectionString = "User Id=IFSAPP;Password=TIMETRAVEL;Data Source=192.168.48.20:1521/PROD";
 
 
+builder.Services.AddScoped<INoorEmployeeImgService, NoorEmployeeImgService>();
+builder.Services.AddScoped<INoorEmployeeImgRepository>(provider =>
+    new NoorEmployeeImgRepository(connectionString));
 builder.Services.AddScoped<INoorEmployeeService, NoorEmployeeService>();
 builder.Services.AddScoped<INoorEmployeeRepository>(provider =>
     new NoorEmployeeRepository(connectionString));
 
 
-
+builder.Services.AddScoped<IMeyerSetSicilFotografService, MeyerSetSicilFotografService>();
 
 builder.Services.AddScoped<IMeyerTokenService,MeyerTokenService>();
 builder.Services.AddHttpClient<MeyerTokenService>();
