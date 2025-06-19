@@ -16,5 +16,7 @@ namespace Domain.Entities
         public string DATE_OF_BIRTH { get; set; }
         public string SEX { get; set; }
         public string BLOOD_TYPE { get; set; }
+        public string date_of_employment { get; set; }
+        public string date_of_leaving { get; set; }
     }
 }

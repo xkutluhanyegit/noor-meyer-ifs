@@ -58,10 +58,13 @@ namespace Infrastracture.ExternalServices.MeyerApi.Services
                     Firma = item.COMPANY_ID,
                     Cinsiyet = item.SEX,
                     Kangrubu = item.BLOOD_TYPE,
-                    GirisTarih = DateTime.Now.ToString("yyyy-MM-dd"),
-                    CikisTarih = DateTime.Now.ToString("yyyy-MM-dd")
+                    GirisTarih = item.date_of_employment,
+                    CikisTarih = item.date_of_leaving
                 };
             
+                // If you need to format GirisTarih, assign it to a string property, e.g.:
+                // sicilModel.GirisTarihFormatted = sicilModel.GirisTarih.ToString("dd.MM.yyyy");
+
             requestBody.RequestData.Data.Add(sicilModel);
             }
 

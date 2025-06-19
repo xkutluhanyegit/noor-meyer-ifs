@@ -10,6 +10,7 @@ namespace Infrastracture.ExternalServices.MeyerApi.Models.Requests
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string GirisTarih { get; set; }
+    
         public string CikisTarih { get; set; }
         public string DogumTarihi { get; set; }
         public string SicilNo { get; set; }

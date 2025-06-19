@@ -17,7 +17,6 @@ var connectionString = "User Id=IFSAPP;Password=TIMETRAVEL;Data Source=192.168.4
 
 
 builder.Services.AddScoped<INoorEmployeeService, NoorEmployeeService>();
-builder.Services.AddScoped<ITestNoorEmpService, TestNoorEmployeeService>();
 builder.Services.AddScoped<INoorEmployeeRepository>(provider =>
     new NoorEmployeeRepository(connectionString));
 
